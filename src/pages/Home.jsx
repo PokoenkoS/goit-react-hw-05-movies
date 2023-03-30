@@ -18,13 +18,13 @@ console.log(movies);
   
       return (
         <main>
-          <div>Домашняя страница </div>
+          <div>Домашня сторінка </div>
           <div>
         {movies.map(movie => {
           return (
             <li key={movie.id}>
-            <Link  to={`/movies/${movie.id}}`}>
-              {movie}
+            <Link  to={`/movies`}>
+              {movie.title}
             </Link>
             </li>
           );
