@@ -2,7 +2,7 @@ const API_KEY = '5678fbf4cc9402a8db1f0e8902896161';
 const URL = 'https://api.themoviedb.org/3'
 const mostPopularUrl = "/trending/movie/day";
 const byKeyWordUrl = "/search/movie";
-const infoFilmUrl ="/movie/:movie.id";
+const infoFilmUrl ="/movie/";
 const actorUrl = "/movie/:movie.id/credits";
 const reviewsUrl = "/movie/:movie_id/reviews"
 
@@ -21,8 +21,8 @@ function getMostPopular(){
          
          
 }
-function getFilm(){
-  return fetch(`${URL}${byKeyWordUrl}?api_key=${API_KEY}`)
+function getFilm(value){
+  return fetch(`${URL}${byKeyWordUrl}?api_key=${API_KEY}&query=${value}`)
   .then(response => {
       if (response.ok) {
         return response.json()
@@ -33,9 +33,10 @@ function getFilm(){
        
 }
 
-function getInformationFilm(){
-  return fetch(`${URL}${infoFilmUrl}?api_key=${API_KEY}`)
+function getInformationFilm(id){
+  return fetch(`${URL}${infoFilmUrl}${id}?api_key=${API_KEY}`)
   .then(response => {
+   
       if (response.ok) {
         return response.json()
         

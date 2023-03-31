@@ -6,7 +6,6 @@ import movieApi from '../components/Api'
 export const Home = () => {
 
     const [movies, setMovies] = useState([]);
-console.log(movies);
 
     useEffect(() => {
         movieApi.getMostPopular()
@@ -23,7 +22,7 @@ console.log(movies);
         {movies.map(movie => {
           return (
             <li key={movie.id}>
-            <Link  to={`/movies`}>
+            <Link  to={`/movies/${movie.id}`}>
               {movie.title}
             </Link>
             </li>

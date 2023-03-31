@@ -1,15 +1,26 @@
-import { Link, Outlet, useParams } from 'react-router-dom';
+import { Link, Outlet, useParams} from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import movieApi from '../components/Api'
+
 
 export const MoviesDetails = () => {
+ 
   const { movieId } = useParams();
+  const {filmInfo, setFilmInfo} = useState(null);
+console.log(filmInfo);
 
-  // useEffect(() => {
-  // HTTP запрос, если нужно
-  // }, [])
+  useEffect(() => {
+    movieApi.getInformationFilm(movieId).then(
+     
+      response => 
+      setFilmInfo([...response.title])
+    );
+}, [movieId]);
 
   return (
     <>
-      <h1>MoviesDetails: {movieId}</h1>
+    <img src={""} alt="" />
+      <h1>MoviesDetails: {""}</h1>
       <ul>
         <li>
           <Link to="cast">Акторський склад</Link>
