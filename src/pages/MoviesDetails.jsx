@@ -7,15 +7,16 @@ export const MoviesDetails = () => {
  
   const { movieId } = useParams();
   const {filmInfo, setFilmInfo} = useState(null);
-console.log(filmInfo);
+// console.log(filmInfo);
 
   useEffect(() => {
     movieApi.getInformationFilm(movieId).then(
      
       response => 
+      // console.log(response)
       setFilmInfo([...response.title])
     );
-}, [movieId]);
+}, [movieId, setFilmInfo]);
 
   return (
     <>

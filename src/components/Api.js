@@ -3,7 +3,7 @@ const URL = 'https://api.themoviedb.org/3'
 const mostPopularUrl = "/trending/movie/day";
 const byKeyWordUrl = "/search/movie";
 const infoFilmUrl ="/movie/";
-const actorUrl = "/movie/:movie.id/credits";
+const actorUrl = "/movie/";
 const reviewsUrl = "/movie/:movie_id/reviews"
 
 
@@ -46,10 +46,11 @@ function getInformationFilm(id){
        
 }
 
-function getInformationActor(){
-  return fetch(`${URL}${actorUrl}?api_key=${API_KEY}`)
+function getInformationActor(id){
+  return fetch(`${URL}${actorUrl}${id}/credits?api_key=${API_KEY}`)
   .then(response => {
       if (response.ok) {
+        console.log(response);
         return response.json()
         
       }
