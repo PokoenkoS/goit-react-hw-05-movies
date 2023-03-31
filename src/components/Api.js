@@ -4,7 +4,7 @@ const mostPopularUrl = "/trending/movie/day";
 const byKeyWordUrl = "/search/movie";
 const infoFilmUrl ="/movie/";
 const actorUrl = "/movie/";
-const reviewsUrl = "/movie/:movie_id/reviews"
+const reviewsUrl = "/movie/";
 
 
 
@@ -50,8 +50,7 @@ function getInformationActor(id){
   return fetch(`${URL}${actorUrl}${id}/credits?api_key=${API_KEY}`)
   .then(response => {
       if (response.ok) {
-        console.log(response);
-        return response.json()
+      return response.json()
         
       }
       return Promise.reject(new Error(`Нет image `));
@@ -59,15 +58,16 @@ function getInformationActor(id){
        
 }
 
-function getReviews(){
-  return fetch(`${URL}${reviewsUrl}?api_key=${API_KEY}`)
+function getReviews(id){
+  return fetch(`${URL}${actorUrl}${id}/reviews?api_key=${API_KEY}`)
   .then(response => {
       if (response.ok) {
-        return response.json()
+      return response.json()
         
       }
       return Promise.reject(new Error(`Нет image `));
       }) 
+       
        
 }
 

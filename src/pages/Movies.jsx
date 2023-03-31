@@ -6,7 +6,6 @@ import SearchForm from 'components/SearchForm';
 const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [value, setValue] = useState('');
-  console.log(movies)
 
   useEffect(() => {
     if (!value) {
@@ -21,8 +20,7 @@ const Movies = () => {
 
   const formSubmitHendler =data=> {
     setValue(data);
-  
-         
+    
       }
 
     return (

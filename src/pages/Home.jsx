@@ -17,7 +17,7 @@ export const Home = () => {
   
       return (
         <main>
-          <div>Домашня сторінка </div>
+          <div>Trending today</div>
           <div>
         {movies.map(movie => {
           return (
