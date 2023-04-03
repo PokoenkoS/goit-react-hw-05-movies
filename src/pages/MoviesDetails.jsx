@@ -25,12 +25,12 @@ import FilmCard from 'components/FilmCard/FilmCard';
       <ul>
         <li>
           <Suspense>
-          <Link to="cast">Акторський склад</Link>
+          <Link to="cast">Actors</Link>
           </Suspense>
         </li>
         <li>
           <Suspense>
-          <Link to="reviews">Огляди</Link>
+          <Link to="reviews">Reviews</Link>
           </Suspense>
         </li>
       </ul>

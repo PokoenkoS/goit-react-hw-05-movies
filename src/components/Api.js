@@ -16,7 +16,7 @@ function getMostPopular(){
           return response.json()
           
         }
-        return Promise.reject(new Error(`Нет image `));
+        return Promise.reject(new Error(`No results`));
         }) 
          
          
@@ -28,7 +28,7 @@ function getFilm(value){
         return response.json()
         
       }
-      return Promise.reject(new Error(`Нет image `));
+      return Promise.reject(new Error(`No results `));
       }) 
        
 }
@@ -41,7 +41,7 @@ function getInformationFilm(id){
         return response.json()
         
       }
-      return Promise.reject(new Error(`Нет image `));
+      return Promise.reject(new Error(`No results `));
       }) 
        
 }
@@ -53,7 +53,7 @@ function getInformationActor(id){
       return response.json()
         
       }
-      return Promise.reject(new Error(`Нет image `));
+      return Promise.reject(new Error(`No results `));
       }) 
        
 }
@@ -65,7 +65,7 @@ function getReviews(id){
       return response.json()
         
       }
-      return Promise.reject(new Error(`Нет image `));
+      return Promise.reject(new Error(`No results `));
       }) 
        
        
