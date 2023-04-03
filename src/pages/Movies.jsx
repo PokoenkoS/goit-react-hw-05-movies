@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import movieApi from '../components/Api'
-import SearchForm from 'components/SearchForm';
+import SearchForm from 'components/SearchForm/SearchForm';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [value, setValue] = useState('');
-
+  const location = useLocation();
   useEffect(() => {
     if (!value) {
       return;
@@ -31,7 +31,7 @@ const Movies = () => {
         return (
           <li key={movie.id}>
            
-          <Link to={`/movie/${movie.id}`}>
+          <Link to={`/movies/${movie.id}`} state={location}>
             {movie.title}
           </Link>
           </li>
