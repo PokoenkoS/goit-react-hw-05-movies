@@ -3,7 +3,7 @@ import movieApi from '../Api'
 import {useParams} from 'react-router-dom';
 import { Li, Ul, H3 } from "./Reviews.styled";
 
-export const Reviews = () => {
+ const Reviews = () => {
 
     const {  movieId } = useParams();
     const [reviews, setReviews] = useState([]);
@@ -38,3 +38,4 @@ export const Reviews = () => {
             </>
         )
 }
+export default Reviews;

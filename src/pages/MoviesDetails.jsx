@@ -1,9 +1,9 @@
 import { Link, Outlet, useParams} from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import movieApi from '../components/Api'
 import FilmCard from 'components/FilmCard/FilmCard';
 
-export const MoviesDetails = () => {
+ const MoviesDetails = () => {
  
   const { movieId } = useParams();
   const [filmInfo, setFilmInfo] = useState([null]);
@@ -24,10 +24,14 @@ export const MoviesDetails = () => {
    
       <ul>
         <li>
+          <Suspense>
           <Link to="cast">Акторський склад</Link>
+          </Suspense>
         </li>
         <li>
+          <Suspense>
           <Link to="reviews">Огляди</Link>
+          </Suspense>
         </li>
       </ul>
       <Outlet />
@@ -36,3 +40,4 @@ export const MoviesDetails = () => {
   );
 };
 
+export default MoviesDetails

@@ -3,7 +3,7 @@ import movieApi from '../Api'
 import {useParams} from 'react-router-dom';
 import { Img, Ul, Li, H3 } from "./Cast.styled";
 
-export const Cast = () => {
+const Cast = () => {
     const {  movieId } = useParams();
 const [actors, setActors] = useState([]);
 
@@ -44,6 +44,6 @@ return (
    )
 } 
      
-   
+   export default Cast
 
 
