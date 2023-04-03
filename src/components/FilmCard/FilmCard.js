@@ -2,7 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import { ImgTag, Div, InfoContainer } from "./FilmCard.styled";
 
 function FilmCard ({data}){
-   const location = useLocation();
+   const location = useLocation();console.log(location);
+   
 return (<>
     <Link to={location.state} >back</Link>
     <Div>

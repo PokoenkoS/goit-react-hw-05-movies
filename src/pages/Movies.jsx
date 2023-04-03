@@ -7,6 +7,7 @@ const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [value, setValue] = useState('');
   const location = useLocation();
+  console.log(location);
   useEffect(() => {
     if (!value) {
       return;

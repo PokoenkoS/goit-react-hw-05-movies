@@ -1,4 +1,4 @@
-import { Link, Outlet, useParams} from 'react-router-dom';
+import { Link, Outlet, useParams, useLocation} from 'react-router-dom';
 import { Suspense, useEffect, useState } from 'react';
 import movieApi from '../components/Api'
 import FilmCard from 'components/FilmCard/FilmCard';
@@ -7,7 +7,7 @@ import FilmCard from 'components/FilmCard/FilmCard';
  
   const { movieId } = useParams();
   const [filmInfo, setFilmInfo] = useState([null]);
-
+  const location = useLocation();
 
   useEffect(() => {
     movieApi.getInformationFilm(movieId).then(
@@ -25,12 +25,12 @@ import FilmCard from 'components/FilmCard/FilmCard';
       <ul>
         <li>
           <Suspense>
-          <Link to="cast">Actors</Link>
+          <Link to="cast" state={location.state}>Actors</Link>
           </Suspense>
         </li>
         <li>
           <Suspense>
-          <Link to="reviews">Reviews</Link>
+          <Link to="reviews"  state={location.state}>Reviews</Link>
           </Suspense>
         </li>
       </ul>

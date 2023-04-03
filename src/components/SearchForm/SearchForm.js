@@ -5,6 +5,7 @@ import {Form, Input, Button} from './SearchForm.styled';
 const SearchForm =({onSubmit})=> {
 const [value, setValue] = useState('');
 
+
 const handleChange = e => setValue(e.currentTarget.value.toLowerCase());
    
 const handleSubmit = e => {
