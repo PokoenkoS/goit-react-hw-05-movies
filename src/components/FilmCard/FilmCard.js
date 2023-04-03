@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { ImgTag, Div, InfoContainer,ButtonBack, } from "./FilmCard.styled";
+import { ImgTag, Div, InfoContainer } from "./FilmCard.styled";
 
 function FilmCard ({data}){
    const location = useLocation();

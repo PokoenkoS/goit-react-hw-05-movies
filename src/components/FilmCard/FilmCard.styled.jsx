@@ -9,10 +9,6 @@ export const Div = styled.div`
     display: flex;
     gap: 10px;
 `;
-export const ButtonBack = styled.button`
-  width: 100px;
-  height: 30px;
-`;
 
 export const InfoContainer = styled.div`
 `;

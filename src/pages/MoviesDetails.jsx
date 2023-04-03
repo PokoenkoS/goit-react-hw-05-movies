@@ -1,4 +1,4 @@
-import { Link, Outlet, useParams, useLocation} from 'react-router-dom';
+import { Link, Outlet, useParams} from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import movieApi from '../components/Api'
 import FilmCard from 'components/FilmCard/FilmCard';
@@ -7,7 +7,7 @@ export const MoviesDetails = () => {
  
   const { movieId } = useParams();
   const [filmInfo, setFilmInfo] = useState([null]);
-  const location = useLocation();
+
 
   useEffect(() => {
     movieApi.getInformationFilm(movieId).then(

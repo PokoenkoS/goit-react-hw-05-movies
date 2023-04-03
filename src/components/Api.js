@@ -59,7 +59,7 @@ function getInformationActor(id){
 }
 
 function getReviews(id){
-  return fetch(`${URL}${actorUrl}${id}/reviews?api_key=${API_KEY}`)
+  return fetch(`${URL}${reviewsUrl}${id}/reviews?api_key=${API_KEY}`)
   .then(response => {
       if (response.ok) {
       return response.json()
