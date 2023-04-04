@@ -7,7 +7,7 @@ export const Home = () => {
 
     const [movies, setMovies] = useState([]);
     const location = useLocation();
-console.log(location);
+
     useEffect(() => {
         movieApi.getMostPopular()
         .then(response => 
