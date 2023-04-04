@@ -5,7 +5,8 @@ function FilmCard ({data}){
    const location = useLocation();console.log(location);
    
 return (<>
-    <Link to={location.state} >back</Link>
+
+    <Link to={location.state ?? '/'} >back</Link>
     <Div>
         
     <ImgTag src={`https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${data.backdrop_path}`} alt="" width={""} />
