@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import movieApi from '../components/Api'
 import MovieList from 'components/MovieList/MovieList';
 
-
 export const Home = () => {
 
     const [movies, setMovies] = useState([]);

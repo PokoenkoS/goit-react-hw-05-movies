@@ -28,8 +28,6 @@ export const Button = styled.button`
     }
 `;
   
-
-  
 export const Input = styled.input`
     display: inline-block;
     width: 100%;

@@ -15,7 +15,6 @@ const [actors, setActors] = useState([]);
           setActors(actors)
         }
            
-        
          );
     }, [ movieId])
 

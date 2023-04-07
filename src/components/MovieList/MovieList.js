@@ -9,7 +9,6 @@ function MovieList ({data}){
 {data.map((movie)=>{
     return (
         <Item key={movie.id}>
-        
         <Link to={`/movies/${movie.id}` ?? '/'} state={{from: location}}>
         <h2>{movie.title} ({(movie.release_date && movie.release_date.slice(0,4))})</h2>
     <ImgTag 

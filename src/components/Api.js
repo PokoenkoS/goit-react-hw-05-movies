@@ -6,8 +6,6 @@ const infoFilmUrl ="/movie/";
 const actorUrl = "/movie/";
 const reviewsUrl = "/movie/";
 
-
-
 function getMostPopular(){
 
     return fetch(`${URL}${mostPopularUrl}?api_key=${API_KEY}`)

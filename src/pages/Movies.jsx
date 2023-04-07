@@ -9,19 +9,15 @@ const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearhParams ]= useSearchParams();
 
-  
   const query = searchParams.get('query');
  
   useEffect(() => {
     if (query) {
       movieApi.getFilm(query)
       .then(response => 
-        
       setMovies([...response.results])
        );
     }
-    
-    
   }, [query])
 
   const formSubmitHendler =data=> {
@@ -35,11 +31,7 @@ const Movies = () => {
 <SearchForm onSubmit={formSubmitHendler}/>
 {movies.length >0 &&<Suspense> <MovieList data = {movies}/></Suspense>}
 </div>
-
-
-    );
+);
   };
  
-
-
 export default Movies;

@@ -9,8 +9,8 @@ import { ImgTag, Div, Item, List, Btn } from "./MoviesDetails.styled";
   const [filmInfo, setFilmInfo] = useState([null]);
   const location = useLocation();
   const navigate = useNavigate();
-const from = location.state?.from || '/';
-const goBackPage = () => navigate(from);
+  const from = location.state?.from || '/';
+  const goBackPage = () => navigate(from);
 
   useEffect(() => {
     movieApi.getInformationFilm(movieId).then(
@@ -38,16 +38,16 @@ const goBackPage = () => navigate(from);
 <div>  
   <h3> Additional information</h3>
       <List>
-        <li>
+        <Item>
           <Suspense>
           <Link to="cast" state={location.state}>Actors</Link>
           </Suspense>
-        </li>
-        <li>
+        </Item>
+        <Item>
           <Suspense>
           <Link to="reviews"  state={location.state}>Reviews</Link>
           </Suspense>
-        </li>
+        </Item>
       </List>
       </div> 
       <Outlet />

@@ -5,22 +5,21 @@ import { Ul, HeaderTag, NavTag, StyledNavLink, Main  } from "./Layout.styled";
 export const Layout = () => {
   return (
     <>
-      
       <HeaderTag>
-                <NavTag>
+        <NavTag>
                         
-                        <Ul>
-                            <li><StyledNavLink to="/">Home</StyledNavLink></li>
-                            <li><StyledNavLink to="/movies">Movies</StyledNavLink></li>
-                        </Ul>
-                    </NavTag>
+          <Ul>
+            <li><StyledNavLink to="/">Home</StyledNavLink></li>
+            <li><StyledNavLink to="/movies">Movies</StyledNavLink></li>
+          </Ul>
+        </NavTag>
                
-            </HeaderTag>
-            <Main>
-                <Suspense fallback={<div>Loading...</div>}>
-                    <Outlet />
-                </Suspense>
-            </Main>  
+      </HeaderTag>
+      <Main>
+        <Suspense fallback={<div>Loading...</div>}>
+            <Outlet />
+        </Suspense>
+      </Main>  
     </>
   );
 };
