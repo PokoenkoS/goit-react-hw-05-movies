@@ -1,46 +1,42 @@
-import { Link, useLocation } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { Suspense, useEffect, useState } from 'react';
 import movieApi from '../components/Api'
 import SearchForm from 'components/SearchForm/SearchForm';
 
+import MovieList from 'components/MovieList/MovieList';
+
 const Movies = () => {
   const [movies, setMovies] = useState([]);
-  const [value, setValue] = useState('');
-  const location = useLocation();
+  const [searchParams, setSearhParams ]= useSearchParams();
+
+  
+  const query = searchParams.get('query');
  
   useEffect(() => {
-    if (!value) {
-      return;
-  }
-      movieApi.getFilm(value)
+    if (query) {
+      movieApi.getFilm(query)
       .then(response => 
         
       setMovies([...response.results])
        );
-  }, [value])
+    }
+    
+    
+  }, [query])
 
   const formSubmitHendler =data=> {
-    setValue(data);
+    setSearhParams({query:data});
     
       }
 
     return (
-      <main>
-        <SearchForm onSubmit={formSubmitHendler}/>
-       <div>
-      {movies.map(movie => {
-        return (
-          <li key={movie.id}>
-           <Suspense>
-          <Link to={`/movies/${movie.id}`} state={location}>
-            {movie.title}
-          </Link>
-          </Suspense>
-          </li>
-        );
-      })}
-    </div>
-      </main>
+
+<div>
+<SearchForm onSubmit={formSubmitHendler}/>
+{movies.length >0 &&<Suspense> <MovieList data = {movies}/></Suspense>}
+</div>
+
+
     );
   };
  

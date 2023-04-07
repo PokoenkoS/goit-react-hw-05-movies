@@ -1,13 +1,13 @@
-import { Link, useLocation } from 'react-router-dom';
+
 import { useEffect, useState } from 'react';
 import movieApi from '../components/Api'
+import MovieList from 'components/MovieList/MovieList';
 
 
 export const Home = () => {
 
     const [movies, setMovies] = useState([]);
-    const location = useLocation();
-
+  
     useEffect(() => {
         movieApi.getMostPopular()
         .then(response => 
@@ -18,19 +18,9 @@ export const Home = () => {
   
       return (
         <main>
-          <div>Trending today</div>
-          <div>
-        {movies.map(movie => {
-          return (
-            <li key={movie.id}>
-            <Link  to={`/movies/${movie.id}`} state={location}>
-              {movie.title}
-            </Link>
-            </li>
-          );
-        })}
-      </div>
-        </main>
+          <h2>Trending today</h2>
+          <MovieList data={movies}/>
+         </main>
       );
     };
    
