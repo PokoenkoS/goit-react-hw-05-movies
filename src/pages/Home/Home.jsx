@@ -1,7 +1,8 @@
 
 import { useEffect, useState } from 'react';
-import movieApi from '../components/Api'
+import movieApi from '../../components/Api'
 import MovieList from 'components/MovieList/MovieList';
+import { Title } from './Home.styled';
 
 export const Home = () => {
 
@@ -10,18 +11,17 @@ export const Home = () => {
     useEffect(() => {
         movieApi.getMostPopular()
         .then(response => 
-           
-        setMovies([...response.results])
+         setMovies([...response.results])
          );
-    }, [])
+    }, []);
   
       return (
         <main>
-          <h2>Trending today</h2>
+          <Title>Trending today</Title>
           <MovieList data={movies}/>
          </main>
       );
     };
    
      
-  export default Home
+  export default Home;

@@ -19,13 +19,13 @@ export const List = styled.ul`
   font-size: 30px;
   font-weight: 900;
   display: flex;
-  justify-content: space-around;
-  gap: 20px;
+  justify-content: space-evenly;
   list-style: none;
 `;
 
 export const StyledNavLink = styled(NavLink)`
   color: black;
+  text-decoration: none;
   &.active {
     color: rgb(20, 150, 144);
   }
