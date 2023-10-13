@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import movieApi from '../../components/Api'
 import MovieList from 'components/MovieList/MovieList';
-import { Title } from './Home.styled';
+import { MainDiv, Title } from './Home.styled';
 
 export const Home = () => {
 
@@ -16,10 +16,10 @@ export const Home = () => {
     }, []);
   
       return (
-        <main>
+        <MainDiv>
           <Title>Trending today</Title>
           <MovieList data={movies}/>
-         </main>
+         </MainDiv>
       );
     };
    

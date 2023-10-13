@@ -4,7 +4,7 @@ import Home from "../pages/Home/Home"
 import {Layout}  from './Header/Layout';
 
 
-const Movies = lazy(()=> import("../pages/Movies"));
+const Movies = lazy(()=> import("../pages/Movies/Movies"));
 const MoviesDetails = lazy(()=> import("../pages/MoviesDetails"));
 const Cast = lazy(()=> import("./Cast/Cast"));
 const Reviews = lazy(()=> import("./Reviews/Reviews"));

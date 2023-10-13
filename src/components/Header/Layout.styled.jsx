@@ -6,7 +6,6 @@ export const HeaderTag = styled.header`
   position: fixed;
   top: 0;
   z-index: 10;
-  height: 60px;
   display: flex;
   align-items: center;
   background-color: #2e0b82;
@@ -32,6 +31,6 @@ export const StyledNavLink = styled(NavLink)`
 `;
 
 export const Main = styled.main`
-    margin-top: 60px;
-    padding-top: 15px;
+    margin-top: 80px;
+    
 `;

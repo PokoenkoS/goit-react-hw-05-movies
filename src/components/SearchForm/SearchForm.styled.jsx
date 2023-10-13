@@ -3,11 +3,13 @@ import styled from '@emotion/styled';
 export const Form = styled.form`
     display: flex;
     align-items: center;
-    width: 100%;
+    /* padding-top:25px; */
+    margin-top:30px;
     max-width: 600px;
-    background-color: #21acda;
+    background-color: #5f21da;
     border-radius: 3px;
     overflow: hidden;
+    
 `;
   
 export const Button = styled.button`

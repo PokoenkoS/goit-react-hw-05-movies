@@ -1,21 +1,16 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-
-
-// export const Div = styled.div`
-//     display: flex;
-//     gap: 10px;
-// `;
-
 export const List = styled.ul`
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: space-around;
     list-style: none;
-    
+    padding: 10px;
 `;
 export const Item = styled.li`
+  background-color:#c3efec;
   display: flex;
   text-align: center;
   border: 1px solid #b6b4b4;
@@ -25,9 +20,8 @@ export const Item = styled.li`
   width: 350px;
   height: 300px;
   &:hover {
-    box-shadow: 5px 6px 20px #2e0b82;
+    box-shadow: 5px 6px 20px #4609d3;
   }
- 
 `;
 export const StyledLink = styled(Link)`
   color: #2e0b82;

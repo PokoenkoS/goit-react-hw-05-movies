@@ -1,9 +1,10 @@
 import { useSearchParams } from 'react-router-dom';
 import { Suspense, useEffect, useState } from 'react';
-import movieApi from '../components/Api'
+import movieApi from '../../components/Api'
 import SearchForm from 'components/SearchForm/SearchForm';
 
 import MovieList from 'components/MovieList/MovieList';
+import { MainDiv } from './Movies.styled';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -27,10 +28,13 @@ const Movies = () => {
 
     return (
 
-<div>
+<MainDiv>
 <SearchForm onSubmit={formSubmitHendler}/>
-{movies.length >0 &&<Suspense> <MovieList data = {movies}/></Suspense>}
-</div>
+{movies.length >0 &&
+<Suspense> 
+<MovieList data = {movies}/>
+</Suspense>}
+</MainDiv>
 );
   };
  
