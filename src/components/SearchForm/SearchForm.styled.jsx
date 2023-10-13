@@ -3,13 +3,10 @@ import styled from '@emotion/styled';
 export const Form = styled.form`
     display: flex;
     align-items: center;
-    /* padding-top:25px; */
-   
     margin-top:30px;
     max-width: 800px;
     background-color: #5f21da;
     border-radius: 3px;
-    /* overflow: hidden; */
     
 `;
   
@@ -18,12 +15,7 @@ export const Button = styled.button`
     width: 50px;
     height: 48px;
     border: 0;
-    /* background-image:url('https://image.flaticon.com/icons/svg/149/149852.svg');
-    background-size: 40%;
-    background-repeat: no-repeat;
-    background-position: center; */
     opacity: 0.6;
-    /* transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); */
     cursor: pointer;
     outline: none;
     &:hover {

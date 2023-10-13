@@ -5,7 +5,7 @@ import {Layout}  from './Header/Layout';
 
 
 const Movies = lazy(()=> import("../pages/Movies/Movies"));
-const MoviesDetails = lazy(()=> import("../pages/MoviesDetails"));
+const MoviesDetails = lazy(()=> import("../pages/MovieDetails/MoviesDetails"));
 const Cast = lazy(()=> import("./Cast/Cast"));
 const Reviews = lazy(()=> import("./Reviews/Reviews"));
 

@@ -1,20 +1,31 @@
 import styled from '@emotion/styled';
 
-export const ImgTag = styled.img`
-    width: 400px;
-    height: 250px;
-`;
+export const MainDiv = styled.div`
+  padding-top:50px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+ 
+`
+
 export const Div = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid black;
 `;
+
+export const ImgTag = styled.img`
+    width: 400px;
+    height: 250px;
+`;
+
 export const Btn = styled.button`
   width:100px;
   height: 30px;
   border-radius: 5px;    
   font-size: 20px;
   margin-bottom: 15px;
+  /* margin-top: 25px; */
   padding-left: 25px;
   display: flex;
   align-items:center;

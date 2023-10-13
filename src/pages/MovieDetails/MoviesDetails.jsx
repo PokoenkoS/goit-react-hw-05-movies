@@ -1,7 +1,7 @@
 import { Link, Outlet, useParams, useLocation, useNavigate} from 'react-router-dom';
 import { Suspense, useEffect, useState } from 'react';
-import movieApi from '../components/Api'
-import { ImgTag, Div, Item, List, Btn } from "./MoviesDetails.styled";
+import movieApi from '../../components/Api'
+import { ImgTag, Div, Item, List, Btn, MainDiv } from "./MoviesDetails.styled";
 
  const MoviesDetails = () => {
  
@@ -18,8 +18,9 @@ import { ImgTag, Div, Item, List, Btn } from "./MoviesDetails.styled";
     );
 }, [movieId, setFilmInfo]);
 
-  return (<>
+  return (<MainDiv>
     <Btn onClick={goBackPage}>back</Btn>
+    <h2>{(filmInfo.title)} ({(filmInfo.release_date && filmInfo.release_date.slice(0,4))})</h2>
     <Div>
     
 <ImgTag 
@@ -27,7 +28,7 @@ import { ImgTag, Div, Item, List, Btn } from "./MoviesDetails.styled";
     alt="" width={""}
      />
     <Div>
-    <h2>{(filmInfo.title)} ({(filmInfo.release_date && filmInfo.release_date.slice(0,4))})</h2>
+    
     <p>User score: {Math.round(filmInfo.vote_average*10)}%</p>
     <h3>Overview</h3>
     <p>{(filmInfo.overview)}</p>
@@ -53,7 +54,7 @@ import { ImgTag, Div, Item, List, Btn } from "./MoviesDetails.styled";
       <Outlet />
       
       </Div>
-      </>
+      </MainDiv>
   );
 };
 
