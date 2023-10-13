@@ -1,4 +1,4 @@
-import { Link,useLocation } from "react-router-dom";
+import {useLocation } from "react-router-dom";
 import { ImgTag, Item, List, StyledLink } from "./MovieList.styled";
 
 function MovieList ({data}){
