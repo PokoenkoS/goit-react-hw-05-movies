@@ -25,7 +25,6 @@ export const Btn = styled.button`
   border-radius: 5px;    
   font-size: 20px;
   margin-bottom: 15px;
-  /* margin-top: 25px; */
   padding-left: 25px;
   display: flex;
   align-items:center;

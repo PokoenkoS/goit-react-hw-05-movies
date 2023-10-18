@@ -5,13 +5,11 @@ export const MainDiv = styled.main`
 `
 
 export const Title = styled.h1`
-
-/* margin-left: 800px; */
 padding-top:30px;
 color: #2e0b82;
 flex-direction: column;
-    align-items: center;
-    text-align: center;
+align-items: center;
+text-align: center;
  font-size: 50px;
  font-weight: bold;
 `
